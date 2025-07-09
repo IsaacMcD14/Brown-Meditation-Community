@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources - Brown Meditation Community</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans" style="background-color: #D9BEDA;">
+  <header style="background-color: #af5ebc" class="text-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-bold">Brown Meditation Community</a>
+      <nav class="space-x-6">
+        <a href="about.html" class="hover:text-indigo-200">About</a>
+        <a href="calendar.html" class="hover:text-indigo-200">Calendar</a>
+        <a href="connect.html" class="hover:text-indigo-200">Connect</a>
+        <a href="merch.html" class="hover:text-indigo-200">Merch</a>
+        <a href="gallery.html" class="hover:text-indigo-200">Gallery</a>
+        <a href="resources.html" class="text-indigo-200 font-semibold">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+   <main class="max-w-3xl mx-auto px-4 py-16" >
+  <!-- Header box -->
+  <section style="background-color: #B57CB6" class="mb-12 py-10 px-6 text-center rounded-2xl text-white">
+    <h1 class="text-4xl font-bold mb-4">Go Deeper into Meditation</h1>
+    <p class="text-base text-sm">Below are resources that have helped facilitators and members as they have explored meditation for themselves. Please reach out with questions, concerns, curiosities, or even just to have a chat!</p>
+  </section>
+
+  
+  <!-- Meditation Apps Section -->
+<!-- Meditation Apps Section -->
+<section class="mb-12 px-4 md:px-0">
+  <!-- Purple Box -->
+  <div style="background-color: #D5A9D9" class="rounded-2xl p-8 text-white">
+
+    <!-- Heading -->
+    <h2 id="app-heading" class="text-2xl font-semibold text-center mb-4 transition-all duration-300">
+      Meditation Apps
+    </h2>
+    <p id="app-subtitle" class="text-white text-center mb-6" style="font-size: 0.65rem;">
+      Click apps for more info!
+    </p>
+
+
+    <!-- Selected App Display -->
+     <div id="app-preview" class="hidden flex items-start gap-6 mb-8">
+  <div class="flex-shrink-0 h-24 w-24 overflow-hidden rounded-3xl shadow-md">
+    <img id="app-icon"
+         src=""
+         alt=""
+         class="w-full h-full object-cover transform transition-all duration-300"
+         style="transform: scale(1.5);" />
+  </div>
+  <div class="flex-1">
+    <p id="app-description" class="text-sm"></p>
+  </div>
+</div>
+
+
+    <!-- App Icons -->
+    <div class="flex flex-wrap justify-center items-center gap-6">
+      <div class="h-24 w-24 overflow-hidden rounded-3xl shadow-md cursor-pointer" onclick="selectApp(this)"
+           data-name="Waking Up" 
+           data-description="Created by neuroscientist Sam Harris, Waking Up blends meditation practice with in-depth lessons on philosophy, consciousness, and self-inquiry. It’s ideal for those seeking both practical mindfulness and deeper intellectual exploration." 
+           data-src="wakingup.jpg">
+        <img src="wakingup.jpg" alt="Waking Up" class="w-full h-full object-cover" style="transform: scale(1.5);" />
+      </div>
+      <div class="h-24 w-24 overflow-hidden rounded-3xl shadow-md cursor-pointer" onclick="selectApp(this)"
+           data-name="Insight Timer" 
+           data-description="Insight Timer features a vast library of free meditations, music, and talks from teachers around the world. With customizable timers and a strong community aspect, it caters to every style and experience level." 
+           data-src="insighttimer.jpg">
+        <img src="insighttimer.jpg" alt="Insight Timer" class="w-full h-full object-cover" style="transform: scale(1.5);" />
+      </div>
+      <div class="h-24 w-24 overflow-hidden rounded-3xl shadow-md cursor-pointer" onclick="selectApp(this)"
+           data-name="Headspace" 
+           data-description="Headspace offers guided meditations and mindfulness exercises designed to reduce stress, improve focus, and support better sleep. With a friendly, accessible interface and bite-sized sessions, it's great for beginners and seasoned practitioners alike." 
+           data-src="headspace.jpg">
+        <img src="headspace.jpg" alt="Headspace" class="w-full h-full object-cover" style="transform: scale(1.5);" />
+      </div>
+      <div class="h-24 w-24 overflow-hidden rounded-3xl shadow-md cursor-pointer" onclick="selectApp(this)"
+           data-name="Smiling Mind" 
+           data-description="Developed by psychologists and educators, Smiling Mind offers mindfulness programs tailored to different age groups, including kids and teens. It’s especially popular in educational and workplace settings for its focus on emotional wellbeing." 
+           data-src="smilingmind.jpg">
+        <img src="smilingmind.jpg" alt="Smiling Mind" class="w-full h-full object-cover" style="transform: scale(1.5);" />
+      </div>
+      <div class="h-24 w-24 overflow-hidden rounded-3xl shadow-md cursor-pointer" onclick="selectApp(this)"
+           data-name="Calm" 
+           data-description="Calm emphasizes relaxation through soothing meditations, bedtime stories, calming music, and breathing exercises. Its sleek design and celebrity narrators make it a go-to for winding down and improving sleep." 
+           data-src="calm.jpg">
+        <img src="calm.jpg" alt="Smiling Mind" class="w-full h-full object-cover" style="transform: scale(1.5);" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+ <!-- Books & Articles Section -->
+<section class="mb-12 px-4 md:px-0">
+  <!-- Purple box -->
+  <div style="background-color: #D5A9D9" class="rounded-2xl p-8 text-white">
+
+    <!-- Heading -->
+    <h2 id="book-heading" class="text-2xl font-semibold text-center mb-2 transition-all duration-300">
+      Books & Articles
+    </h2>
+    <p id="book-subtitle" class="text-sm text-white text-center mb-6" style="font-size: 0.65rem;">
+    Click a title for more info
+    </p>
+
+    <!-- Preview display -->
+    <div id="book-preview" class="hidden flex items-start gap-6 mb-8">
+  <div class="h-48 w-32 flex-shrink-0 overflow-hidden rounded-2xl shadow-md">
+    <img id="book-cover"
+         src=""
+         alt=""
+         class="w-full h-full object-cover transform transition-all duration-300"
+         style="transform: scale(1.05);" />
+  </div>
+  <div class="flex-1">
+    <p id="book-description" class="text-sm"></p>
+  </div>
+</div>
+
+    <!-- Book icons -->
+    <div class="flex flex-wrap justify-center items-center gap-6">
+      <!-- New Book -->
+    <div class="w-32 h-48 overflow-hidden rounded-lg shadow-md cursor-pointer" onclick="selectBook(this)"
+      data-name="Wherever You Go There You Are"
+      data-description="A foundational book on mindfulness, Kabat-Zinn offers simple, clear reflections that invite readers to bring presence and awareness into everyday life. It’s accessible, poetic, and a great introduction to meditation as a way of being."
+      data-src="jkz.jpg">
+    <img src="jkz.jpg" alt="One Dharma" class="w-full h-full object-cover" style="object-position: center 10%; transform: scale(1.05);" />
+    <p class="text-xs text-center mt-2 text-white">One Dharma</p>
+  </div>
+      <!-- New Book -->
+    <div class="w-32 h-48 overflow-hidden rounded-lg shadow-md cursor-pointer" onclick="selectBook(this)"
+      data-name="One Dharma"
+      data-description="Goldstein blends insights from Buddhist traditions into a unified, practical path of mindfulness, ethics, and wisdom. The book bridges Theravāda, Zen, and Tibetan teachings with clarity and depth, offering a modern approach to spiritual practice."
+      data-src="onedharma.jpg">
+    <img src="onedharma.jpg" alt="One Dharma" class="w-full h-full object-cover" style="object-position: center 10%; transform: scale(1.05);" />
+    <p class="text-xs text-center mt-2 text-white">One Dharma</p>
+  </div>
+      <!-- New Book -->
+    <div class="w-32 h-48 overflow-hidden rounded-lg shadow-md cursor-pointer" onclick="selectBook(this)"
+      data-name="The Alchemist"
+      data-description=" A spiritual fable about a young shepherd in search of his “Personal Legend,” The Alchemist explores the idea that the universe conspires to help us follow our true path. With poetic simplicity, it’s a story of purpose, intuition, and transformation."
+      data-src="alchemist.jpg">
+    <img src="alchemist.jpg" alt="The Alchemist" class="w-full h-full object-cover" style="object-position: center 10%; transform: scale(1.05);" />
+    <p class="text-xs text-center mt-2 text-white">The Alchemist </p>
+  </div>
+  <!-- New Book -->
+    <div class="w-32 h-48 overflow-hidden rounded-lg shadow-md cursor-pointer" onclick="selectBook(this)"
+      data-name="The Miracle of Mindfulness"
+      data-description="This gentle, profound guide invites readers to bring mindfulness into the smallest moments of life — washing dishes, walking, or breathing. Thich Nhat Hanh’s teachings are simple yet transformative, rooted in compassion and peace."
+      data-src="tnh.jpg">
+    <img src="tnh.jpg" alt="The Miracle of Mindfulness" class="w-full h-full object-cover" style="object-position: center 10%; transform: scale(1.05);" />
+    <p class="text-xs text-center mt-2 text-white">The Miracle of Mindfulness</p>
+  </div>
+  <!-- New Book -->
+    <div class="w-32 h-48 overflow-hidden rounded-lg shadow-md cursor-pointer" onclick="selectBook(this)"
+      data-name="The Power of Now"
+      data-description="Tolle explores how freedom from suffering and spiritual awakening come through fully inhabiting the present moment. The book combines philosophical insight with practical guidance on quieting the mind and finding inner stillness."
+      data-src="pon.jpg">
+    <img src="pon.jpg" alt="The Power of Now" class="w-full h-full object-cover" style="object-position: center 10%; transform: scale(1.05);" />
+    <p class="text-xs text-center mt-2 text-white">The Power of Now</p>
+  </div>
+  <!-- New Book -->
+    <div class="w-32 h-48 overflow-hidden rounded-lg shadow-md cursor-pointer" onclick="selectBook(this)"
+      data-name="Mans Search For Meaning"
+      data-description="Drawing from his experiences as a Holocaust survivor and psychiatrist, Frankl argues that meaning—not pleasure or power—is the key to enduring life’s suffering. It’s a powerful testament to resilience, dignity, and the human spirit."
+      data-src="msfm.jpg">
+    <img src="msfm.jpg" alt="Man's Search For Meaning" class="w-full h-full object-cover" style="object-position: center 10%; transform: scale(1.05);" />
+    <p class="text-xs text-center mt-2 text-white">Man's Search for Meaning</p>
+  </div>
+  <!-- New Book -->
+    <div class="w-32 h-48 overflow-hidden rounded-lg shadow-md cursor-pointer" onclick="selectBook(this)"
+      data-name="Loving-Kindness"
+      data-description="This heartfelt guide introduces the Buddhist practice of metta, or loving-kindness meditation, as a way to open the heart and dissolve barriers. Salzberg offers personal stories, meditation instructions, and reflections on compassion in everyday life."
+      data-src="salzburg.jpg">
+    <img src="salzburg.jpg" alt="Loving-Kindness" class="w-full h-full object-cover" style="object-position: center 10%; transform: scale(1.05);" />
+    <p class="text-xs text-center mt-2 text-white">Loving-Kindness</p>
+  </div>
+  <!-- New Book -->
+    <div class="w-32 h-48 overflow-hidden rounded-lg shadow-md cursor-pointer" onclick="selectBook(this)"
+      data-name="How to Meditate"
+      data-description="Pema Chödrön demystifies meditation with warmth and honesty, offering step-by-step guidance rooted in Buddhist tradition. It’s a practical and deeply human guide to working with the mind and opening the heart."
+      data-src="chodron.jpg">
+    <img src="chodron.jpg" alt="Loving-Kindness" class="w-full h-full object-cover" style="object-position: center 10%; transform: scale(1.05);" />
+    <p class="text-xs text-center mt-2 text-white">How to Meditate</p>
+  </div>
+ <!-- New Book -->
+    <div class="w-32 h-48 overflow-hidden rounded-lg shadow-md cursor-pointer" onclick="selectBook(this)"
+      data-name="Zen Training"
+      data-description="A rigorous yet accessible manual on Zen meditation, Sekida explains zazen (sitting meditation) with precision and depth. The book combines traditional Zen insight with a scientific understanding of the mind-body process."
+      data-src="zentraining.jpg">
+    <img src="zentraining.jpg" alt="Loving-Kindness" class="w-full h-full object-cover" style="object-position: center 10%; transform: scale(1.05);" />
+    <p class="text-xs text-center mt-2 text-white">Zen Training</p>
+  </div>
+   <!-- New Book -->
+    <div class="w-32 h-48 overflow-hidden rounded-lg shadow-md cursor-pointer" onclick="selectBook(this)"
+      data-name="How Meditation Works"
+      data-description="Shinzen Young offers a sweeping, practical overview of meditation across Buddhist traditions, emphasizing the balance between concentration (shamatha) and insight (vipashyana). With clarity and depth, he shows how meditation leads to freedom from suffering, a transformed sense of self, and compassionate action in the world."
+      data-src="young.jpg">
+    <img src="young.jpg" alt="How Meditation Works" class="w-full h-full object-cover" style="object-position: center 10%; transform: scale(1.05);" />
+    <p class="text-xs text-center mt-2 text-white">How Meditation Works</p>
+  </div>
+  <!-- New Book -->
+    <div class="w-32 h-48 overflow-hidden rounded-lg shadow-md cursor-pointer" onclick="selectBook(this)"
+      data-name="Meditating Selflessly"
+      data-description="Drawing on neuroscience and Zen, James Austin explores how deep meditation dissolves the illusion of a separate self. He combines scientific insight with personal experience to show how selfless awareness leads to lasting peace and clarity."
+      data-src="selflessly.jpg">
+    <img src="selflessly.jpg" alt="Meditating Selflessly" class="w-full h-full object-cover" style="object-position: center 10%; transform: scale(1.05);" />
+    <p class="text-xs text-center mt-2 text-white">Meditating Selflessly</p>
+  </div>
+   <!-- New Book -->
+    <div class="w-32 h-48 overflow-hidden rounded-lg shadow-md cursor-pointer" onclick="selectBook(this)"
+      data-name="A Love Letter to the Earth"
+      data-description="This poetic meditation invites readers to fall in love with the Earth and care for it as part of their own body. Through mindfulness and gratitude, Thich Nhat Hanh offers a gentle path to healing both ourselves and the planet.
+
+"
+      data-src="lovelettertoearth.jpg">
+    <img src="lovelettertoearth.jpg" alt="Meditating Selflessly" class="w-full h-full object-cover" style="object-position: center 10%; transform: scale(1.05);" />
+    <p class="text-xs text-center mt-2 text-white"> A Love Letter to the Earth</p>
+  </div>
+      <!-- Add more books here as needed -->
+    </div>
+  </div>
+</section>
+
+
+ <!-- Other Resources -->
+
+<section>
+  <div class="space-y-6">
+  <div style="background-color: #D5A9D9" class="rounded-2xl p-6 text-white text-center space-y-4">
+    
+    <!-- Header above button (match section headers) -->
+    <p class="text-xl font-semibold">Contemplative Studies Website Home</p>
+    <p class="text-xs text-white" style="font-size: 0.65rem;">
+      Find information about meditation courses, retreat centers, events and more!
+    </p>
+    <div class="flex justify-center">
+     <a href="https://contemplative-studies.brown.edu/" 
+   target="_blank" 
+   rel="noopener noreferrer"
+   class="inline-block font-semibold px-6 py-3 rounded-lg transition text-white text-sm"
+   style="background-color: #C197C3"> 
+  Contemplative Studies Website
+</a>
+
+    </div>
+  </div>
+
+
+    <!--  Contemplative Practice Grants -->
+<div style="background-color: #D5A9D9" class="rounded-2xl p-6 text-white text-center">
+  <h2 class="text-xl font-semibold mb-2">Free Money for Meditation Retreats</h2>
+  <button 
+    onclick="copyEmailToClipboard()" 
+    class="inline-block font-semibold px-6 py-3 rounded-lg transition text-white text-sm hover:bg-purple-200" 
+    style="background-color: #C197C3;">
+    Email us for more info!
+  </button>
+  <p id="copy-confirmation" class="text-sm mt-2 hidden text-white">Copied Email to Clipboard!</p>
+</div>
+
+
+
+
+    <!-- Suggested Retreat Locations -->
+<div style="background-color: #D5A9D9" class="rounded-2xl p-6 text-white text-center">
+  <h2 class="text-xl font-semibold mb-4">Suggested Retreat Locations</h2>
+  <div class="flex justify-center">
+    <a href="https://contemplative-studies.brown.edu/practice/suggested-retreat-locations"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="inline-block font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition"
+       style="background-color: #C197C3; font-size: 0.875rem;">
+      Retreat Locations
+    </a>
+  </div>
+</div>
+</section>
+
+
+  
+  </main>
+
+  <footer class="bg-gray-100 text-center py-6 mt-12 text-sm text-gray-600">
+    © 2025 Brown Meditation Community. All rights reserved.
+  </footer>
+  <script>
+  function selectApp(el) {
+  const name = el.getAttribute("data-name");
+  const description = el.getAttribute("data-description");
+  const src = el.getAttribute("data-src");
+
+  // Update heading
+  document.getElementById("app-heading").textContent = name;
+
+  // Show preview
+  const preview = document.getElementById("app-preview");
+  document.getElementById("app-icon").src = src;
+  document.getElementById("app-icon").alt = name;
+  document.getElementById("app-description").textContent = description;
+  preview.classList.remove("hidden");
+
+  // Hide the subtitle
+  document.getElementById("app-subtitle").classList.add("hidden");
+}
+
+function selectBook(el) {
+  const name = el.getAttribute("data-name");
+  const description = el.getAttribute("data-description");
+  const src = el.getAttribute("data-src");
+
+  document.getElementById("book-heading").textContent = name;
+
+  const preview = document.getElementById("book-preview");
+  const cover = document.getElementById("book-cover");
+  const desc = document.getElementById("book-description");
+
+  cover.src = src;
+  cover.alt = name;
+  desc.textContent = description;
+
+  preview.classList.remove("hidden");
+
+  // Hide the subtitle
+  document.getElementById("book-subtitle").classList.add("hidden");
+}
+  function copyEmailToClipboard() {
+  const email = "meditationcommunity@brown.edu";
+  navigator.clipboard.writeText(email).then(() => {
+    const confirmation = document.getElementById("copy-confirmation");
+    confirmation.classList.remove("hidden");
+    setTimeout(() => {
+      confirmation.classList.add("hidden");
+    }, 2000);
+  });
+}
+
+</script>
+
+</body>
+</html>

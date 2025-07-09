@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Brown Meditation Community</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+  .masonry {
+    column-count: 1;
+    column-gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .masonry {
+      column-count: 2;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .masonry {
+      column-count: 3;
+    }
+  }
+
+  .masonry img {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+  }
+</style>
+
+</head>
+
+<script>
+  function openLightbox(src) {
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("lightbox").classList.remove("hidden");
+    document.addEventListener("keydown", handleEscape);
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").classList.add("hidden");
+    document.removeEventListener("keydown", handleEscape);
+  }
+
+  function handleEscape(event) {
+    if (event.key === "Escape") {
+      closeLightbox();
+    }
+  }
+</script>
+
+<body class="bg-gray-50 text-gray-800 font-sans" style="background-color: #D9BEDA;">
+  <header style="background-color: #af5ebc" class="text-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-bold">Brown Meditation Community</a>
+      <nav class="space-x-6">
+        <a href="about.html" class="hover:text-indigo-200">About</a>
+        <a href="calendar.html" class="hover:text-indigo-200">Calendar</a>
+        <a href="connect.html" class="hover:text-indigo-200">Connect</a>
+        <a href="merch.html" class="hover:text-indigo-200">Merch</a>
+        <a href="gallery.html" class="text-indigo-200 font-semibold">Gallery</a>
+        <a href="resources.html" class="hover:text-indigo-200">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 py-16">
+  <!-- Header section styled like other pages
+  <section style="background-color: #B57CB6" class="mb-12 p-8 text-center rounded-2xl">
+    <h1 class="text-4xl font-bold text-white mb-2">Gallery</h1>
+  </section> -->
+
+  <!-- Gallery Grid -->
+<section class="px-4">
+  <div class="masonry">
+    <img src="IMG_3106.jpeg" alt="Gallery Image 1" class="shadow-lg hover:opacity-80 transition cursor-pointer" onclick="openLightbox(this.src)">
+    <img src="IMG_3112.jpeg" alt="Gallery Image 2" class="shadow-lg hover:opacity-80 transition cursor-pointer" onclick="openLightbox(this.src)">
+    <img src="IMG_6121.jpeg" alt="Gallery Image 3" class="shadow-lg hover:opacity-80 transition cursor-pointer" onclick="openLightbox(this.src)">
+    <img src="IMG_6134.jpeg" alt="Gallery Image 4" class="shadow-lg hover:opacity-80 transition cursor-pointer" onclick="openLightbox(this.src)">
+    <img src="IMG_6137.jpeg" alt="Gallery Image 5" class="shadow-lg hover:opacity-80 transition cursor-pointer" onclick="openLightbox(this.src)">
+    <img src="IMG_9020.jpeg" alt="Gallery Image 6" class="shadow-lg hover:opacity-80 transition cursor-pointer" onclick="openLightbox(this.src)">
+    <img src="IMG_9021.jpeg" alt="Gallery Image 7" class="shadow-lg hover:opacity-80 transition cursor-pointer" onclick="openLightbox(this.src)">
+    <img src="IMG_9024.jpeg" alt="Gallery Image 8" class="shadow-lg hover:opacity-80 transition cursor-pointer" onclick="openLightbox(this.src)">
+    <img src="IMG_9025.jpeg" alt="Gallery Image 9" class="shadow-lg hover:opacity-80 transition cursor-pointer" onclick="openLightbox(this.src)">
+    <img src="IMG_9028.jpeg" alt="Gallery Image 10" class="shadow-lg hover:opacity-80 transition cursor-pointer" onclick="openLightbox(this.src)">
+    <img src="IMG_9029.jpeg" alt="Gallery Image 11" class="shadow-lg hover:opacity-80 transition cursor-pointer" onclick="openLightbox(this.src)">
+    <video class="w-full rounded-lg shadow-lg hover:opacity-80 transition mb-4" controls>
+  <source src="IMG_9026.mp4" type="video/mp4">
+</video>
+
+<video class="w-full rounded-lg shadow-lg hover:opacity-80 transition mb-4" controls>
+  <source src="IMG_9027.mp4" type="video/mp4">
+</video>
+
+
+  </div>
+</section>
+
+
+</main>
+
+
+
+  <footer class="bg-gray-100 text-center py-6 mt-12 text-sm text-gray-600">
+    © 2025 Brown Meditation Community. All rights reserved.
+  </footer>
+
+  <!-- Lightbox Modal -->
+<div id="lightbox" 
+     class="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50 hidden"
+     onclick="closeLightbox()">
+  <img id="lightbox-img" class="max-w-full max-h-full rounded-lg" />
+</div>
+
+</body>
+</html>

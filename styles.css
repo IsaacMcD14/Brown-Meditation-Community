@@ -1,0 +1,89 @@
+/* Gradient background for hero or full-page sections */
+.gradient-background {
+  background-image: linear-gradient(to bottom, #af5ebc, #ffffff);
+}
+
+/* Fade-up animation */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 2.5s ease-out forwards;
+}
+
+.fade-up-delayed {
+  animation: fadeUp 2.5s ease-out 1.5s forwards;
+}
+
+.card-container {
+  perspective: 1000px;
+  width: 11rem;  /* w-64 */
+  height: 14rem; /* h-96 */
+  border-radius: 1rem;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+  border-radius: 1rem;
+}
+
+.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #D5A9D9;
+  
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background-color: #D5A9D9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+}
+#copy-confirmation {
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+#copy-confirmation.hidden {
+  opacity: 0;
+  pointer-events: none; /* so it doesn't block clicks when hidden */
+}
+.bg-custom-purple {
+  background-color: #C197C3;
+  transition: background-color 0.3s ease;
+}
+
+

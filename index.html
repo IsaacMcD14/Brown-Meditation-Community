@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brown Meditation Community</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .gradient-background {
+      background-image: linear-gradient(to bottom, #af5ebc, #ffffff);
+    }
+
+    @keyframes fadeUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-up {
+      animation: fadeUp 2.5s ease-out forwards;
+    }
+
+    .fade-up-delayed {
+      animation: fadeUp 2.5s ease-out 1.5s forwards;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans m-0 p-0">
+
+  <!-- Navigation -->
+  <header style="background-color: #af5ebc" class="text-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Brown Meditation Community</h1>
+      <nav class="space-x-6">
+        <a href="about.html" class="hover:text-indigo-200">About</a>
+        <a href="calendar.html" class="hover:text-indigo-200">Calendar</a>
+        <a href="connect.html" class="hover:text-indigo-200">Connect</a>
+        <a href="merch.html" class="hover:text-indigo-200">Merch</a>
+        <a href="gallery.html" class="hover:text-indigo-200">Gallery</a>
+        <a href="resources.html" class="hover:text-indigo-200">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="gradient-background h-screen w-full flex flex-col items-center justify-center text-center -translate-y-20">
+    <h1 class="text-white text-4xl md:text-6xl font-light fade-up"style="font-family: 'Petrona', serif;" >
+      Brown Meditation Community
+    </h1>
+    <p class="text-white text-2xl md:text-3xl italic mt-4 opacity-0 fade-up-delayed"style="font-family: 'Petrona', serif;">
+      Welcome.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-center py-6 text-sm text-gray-600">
+    © 2025 Brown Meditation Community. All rights reserved.
+  </footer>
+
+</body>
+</html>

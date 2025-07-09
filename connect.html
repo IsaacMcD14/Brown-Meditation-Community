@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Connect - Brown Meditation Community</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-[#f2eaf4] text-gray-800 font-sans" style="background-color: #D9BEDA;">
+  <!-- Header -->
+  <header style="background-color: #af5ebc" class="text-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-bold">Brown Meditation Community</a>
+      <nav class="space-x-6">
+        <a href="about.html" class="hover:text-indigo-200">About</a>
+        <a href="calendar.html" class="hover:text-indigo-200">Calendar</a>
+        <a href="connect.html" class="text-indigo-200 font-semibold">Connect</a>
+        <a href="merch.html" class="hover:text-indigo-200">Merch</a>
+        <a href="gallery.html" class="hover:text-indigo-200">Gallery</a>
+        <a href="resources.html" class="hover:text-indigo-200">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-3xl mx-auto px-4 py-16">
+  <!-- Large header box -->
+  <section style="background-color: #B57CB6" class="mb-12 py-12 text-center rounded-2xl text-white">
+    <h1 class="text-4xl font-bold">Connect With Us</h1>
+  </section>
+
+  <!-- Smaller option boxes -->
+  <div class="space-y-6">
+  <div style="background-color: #D5A9D9" class="rounded-2xl p-6 text-white text-center space-y-4">
+    
+    <!-- Header above button (match section headers) -->
+    <p class="text-xl font-semibold">Join our email list and WhatsApp group by filling out the form</p>
+    
+    <div class="flex justify-center">
+     <a href="https://docs.google.com/forms/d/YOUR_FORM_ID/viewform" 
+   target="_blank" 
+   rel="noopener noreferrer"
+   class="inline-block font-semibold px-6 py-3 rounded-lg transition text-white text-sm"
+   style="background-color: #C197C3"> 
+  Fill out our Google Form
+</a>
+
+    </div>
+  </div>
+
+
+    <!-- Mentor Application -->
+<div style="background-color: #D5A9D9" class="rounded-2xl p-6 text-white text-center">
+  <h2 class="text-xl font-semibold mb-4">Mentor Application Form</h2>
+  <div class="flex justify-center">
+    <a href="https://docs.google.com/forms/d/YOUR_FORM_ID/viewform"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="inline-block font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition"
+       style="background-color: #C197C3; font-size: 0.875rem;">
+      Apply Here
+    </a>
+  </div>
+</div>
+
+
+
+    <!-- Email Contact -->
+<div style="background-color: #D5A9D9" class="rounded-2xl p-6 text-white text-center">
+  <h2 class="text-xl font-semibold mb-2">Contact us by Email</h2>
+  <button 
+    onclick="copyEmailToClipboard()" 
+    class="inline-block font-semibold px-6 py-3 rounded-lg transition text-white text-sm hover:bg-purple-200" 
+    style="background-color: #C197C3;">
+    Copy Email to Clipboard
+  </button>
+  <p id="copy-confirmation" class="text-sm mt-2 hidden text-white">Copied!</p>
+</div>
+
+
+  <!-- Closing note -->
+  <p class="mt-8 text-center text-gray-600 italic">Please email us with any questions, we look forward to hearing from you!</p>
+</main>
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-center py-6 mt-12 text-sm text-gray-600">
+    © 2025 Brown Meditation Community. All rights reserved.
+  </footer>
+  <script>
+  function copyEmailToClipboard() {
+  const email = "meditationcommunity@brown.edu";
+  navigator.clipboard.writeText(email).then(() => {
+    const confirmation = document.getElementById("copy-confirmation");
+    confirmation.classList.remove("hidden");
+    setTimeout(() => {
+      confirmation.classList.add("hidden");
+    }, 2000);
+  });
+}
+
+</script>
+</body>
+</html>
