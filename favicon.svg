@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Meditating bear favicon for Brown Meditation Community -->
+  <g stroke="none">
+    <!-- crossed legs / lap base -->
+    <ellipse cx="256" cy="404" rx="176" ry="70" fill="#7d5230"/>
+    <ellipse cx="256" cy="424" rx="150" ry="52" fill="#8a5c36"/>
+    <!-- foot pads -->
+    <ellipse cx="196" cy="410" rx="34" ry="26" fill="#c79a5f"/>
+    <ellipse cx="316" cy="410" rx="34" ry="26" fill="#c79a5f"/>
+
+    <!-- arms resting on knees -->
+    <ellipse cx="118" cy="322" rx="42" ry="86" fill="#8a5c36" transform="rotate(18 118 322)"/>
+    <ellipse cx="394" cy="322" rx="42" ry="86" fill="#8a5c36" transform="rotate(-18 394 322)"/>
+    <!-- paws (meditation mudra) -->
+    <circle cx="150" cy="372" r="30" fill="#8a5c36"/>
+    <circle cx="362" cy="372" r="30" fill="#8a5c36"/>
+    <circle cx="150" cy="372" r="14" fill="#c79a5f"/>
+    <circle cx="362" cy="372" r="14" fill="#c79a5f"/>
+
+    <!-- body -->
+    <ellipse cx="256" cy="312" rx="150" ry="140" fill="#8a5c36"/>
+    <!-- belly -->
+    <ellipse cx="256" cy="316" rx="78" ry="96" fill="#c79a5f"/>
+
+    <!-- ears -->
+    <circle cx="176" cy="120" r="46" fill="#8a5c36"/>
+    <circle cx="336" cy="120" r="46" fill="#8a5c36"/>
+    <circle cx="176" cy="120" r="22" fill="#c79a5f"/>
+    <circle cx="336" cy="120" r="22" fill="#c79a5f"/>
+
+    <!-- head -->
+    <circle cx="256" cy="176" r="108" fill="#8a5c36"/>
+    <!-- muzzle patch -->
+    <ellipse cx="256" cy="198" rx="66" ry="56" fill="#c79a5f"/>
+
+    <!-- closed peaceful eyes -->
+    <path d="M204 168 q18 20 40 0" fill="none" stroke="#4d321f" stroke-width="9" stroke-linecap="round"/>
+    <path d="M268 168 q18 20 40 0" fill="none" stroke="#4d321f" stroke-width="9" stroke-linecap="round"/>
+
+    <!-- nose -->
+    <ellipse cx="256" cy="196" rx="15" ry="11" fill="#4d321f"/>
+    <!-- gentle smile -->
+    <path d="M256 207 v10 M256 217 q-16 14 -30 4 M256 217 q16 14 30 4" fill="none" stroke="#4d321f" stroke-width="7" stroke-linecap="round"/>
+  </g>
+</svg>
