@@ -6,6 +6,17 @@
   <title>Connect - Brown Meditation Community</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <style>
+    /* Shared button styling so every button in this view darkens on hover.
+       Using a class (not inline styles) so the :hover rule can actually take effect. */
+    .connect-btn {
+      background-color: #C197C3;
+      transition: background-color 0.2s ease;
+    }
+    .connect-btn:hover {
+      background-color: #9E7CA0;
+    }
+  </style>
 </head>
 
 <body class="bg-[#f2eaf4] text-gray-800 font-sans" style="background-color: #D9BEDA;">
@@ -33,20 +44,29 @@
 
   <!-- Smaller option boxes -->
   <div class="space-y-6">
-  <div style="background-color: #D5A9D9" class="rounded-2xl p-6 text-white text-center space-y-4">
-    
-    <!-- Header above button (match section headers) -->
-    <p class="text-xl font-semibold">Join our email list and WhatsApp group by filling out the form</p>
-    
+  <!-- WhatsApp group chat -->
+  <div style="background-color: #D5A9D9" class="rounded-2xl p-6 text-white text-center">
+    <h2 class="text-xl font-semibold mb-4">Join the WhatsApp group chat</h2>
     <div class="flex justify-center">
-     <a href="https://forms.gle/xmv1Tg5TTTQGY5cA9" 
-   target="_blank" 
-   rel="noopener noreferrer"
-   class="inline-block font-semibold px-6 py-3 rounded-lg transition text-white text-sm"
-   style="background-color: #C197C3"> 
-  Fill out our Google Form
-</a>
+      <a href="https://forms.gle/uJqz1ptYaNs2T2KK7"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="connect-btn inline-block font-semibold px-6 py-3 rounded-lg text-white text-sm">
+        Join the WhatsApp group chat
+      </a>
+    </div>
+  </div>
 
+  <!-- Mailing list -->
+  <div style="background-color: #D5A9D9" class="rounded-2xl p-6 text-white text-center">
+    <h2 class="text-xl font-semibold mb-4">Join the mailing list</h2>
+    <div class="flex justify-center">
+      <a href="https://groups.google.com/a/group.brown.edu/g/meditationcommunity"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="connect-btn inline-block font-semibold px-6 py-3 rounded-lg text-white text-sm">
+        Join the mailing list
+      </a>
     </div>
   </div>
 
@@ -58,8 +78,7 @@
     <a href="https://www.instagram.com/brownmeditationcommunity?stkn=Z3h0aXh0MzdvdGYz&utm_source=qr"
        target="_blank"
        rel="noopener noreferrer"
-       class="inline-block font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition"
-       style="background-color: #C197C3; font-size: 0.875rem;">
+       class="connect-btn inline-block font-semibold px-6 py-3 rounded-lg text-white text-sm">
       @brownmeditationcommunity
     </a>
   </div>
@@ -70,10 +89,9 @@
     <!-- Email Contact -->
 <div style="background-color: #D5A9D9" class="rounded-2xl p-6 text-white text-center">
   <h2 class="text-xl font-semibold mb-2">Contact us by Email</h2>
-  <button 
-    onclick="copyEmailToClipboard()" 
-    class="inline-block font-semibold px-6 py-3 rounded-lg transition text-white text-sm hover:bg-purple-200" 
-    style="background-color: #C197C3;">
+  <button
+    onclick="copyEmailToClipboard()"
+    class="connect-btn inline-block font-semibold px-6 py-3 rounded-lg text-white text-sm">
     Copy Email to Clipboard
   </button>
   <p id="copy-confirmation" class="text-sm mt-2 hidden text-white">Copied!</p>
