@@ -5,13 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resources - Brown Meditation Community</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <script src="nav.js" defer></script>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans" style="background-color: #D9BEDA;">
   <header style="background-color: #af5ebc" class="text-white shadow sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-xl font-bold">Brown Meditation Community</a>
-      <nav class="space-x-6">
+    <div class="site-header-inner max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-lg sm:text-xl font-bold">Brown Meditation Community</a>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav id="site-nav" class="site-nav space-x-6">
         <a href="about.html" class="hover:text-indigo-200">About</a>
         <a href="calendar.html" class="hover:text-indigo-200">Calendar</a>
         <a href="join.html" class="hover:text-indigo-200">Connect</a>
@@ -22,19 +27,19 @@
     </div>
   </header>
 
-   <main class="max-w-3xl mx-auto px-4 py-16" >
+   <main class="max-w-3xl mx-auto px-4 py-10 sm:py-16">
   <!-- Header box -->
   <section style="background-color: #B57CB6" class="mb-12 py-10 px-6 text-center rounded-2xl text-white">
-    <h1 class="text-4xl font-bold mb-4">Go Deeper into Meditation</h1>
+    <h1 class="text-3xl sm:text-4xl font-bold mb-4">Go Deeper into Meditation</h1>
     <p class="text-base text-sm">Below are resources that have helped facilitators and members as they have explored meditation for themselves. Please reach out with questions, concerns, curiosities, or even just to have a chat!</p>
   </section>
 
   
   <!-- Meditation Apps Section -->
 <!-- Meditation Apps Section -->
-<section class="mb-12 px-4 md:px-0">
+<section class="mb-12">
   <!-- Purple Box -->
-  <div style="background-color: #D5A9D9" class="rounded-2xl p-8 text-white">
+  <div style="background-color: #D5A9D9" class="rounded-2xl p-5 sm:p-8 text-white">
 
     <!-- Heading -->
     <h2 id="app-heading" class="text-2xl font-semibold text-center mb-4 transition-all duration-300">
@@ -46,7 +51,7 @@
 
 
     <!-- Selected App Display -->
-     <div id="app-preview" class="hidden flex items-start gap-6 mb-8">
+     <div id="app-preview" class="hidden flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 mb-8 text-center sm:text-left">
   <div class="flex-shrink-0 h-24 w-24 overflow-hidden rounded-3xl shadow-md">
     <img id="app-icon"
          src=""
@@ -61,7 +66,7 @@
 
 
     <!-- App Icons -->
-    <div class="flex flex-wrap justify-center items-center gap-6">
+    <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6">
       <div class="h-24 w-24 overflow-hidden rounded-3xl shadow-md cursor-pointer" onclick="selectApp(this)"
            data-name="Waking Up" 
            data-description="Created by neuroscientist Sam Harris, Waking Up blends meditation practice with in-depth lessons on philosophy, consciousness, and self-inquiry. It’s ideal for those seeking both practical mindfulness and deeper intellectual exploration." 
@@ -99,9 +104,9 @@
 
 
  <!-- Books & Articles Section -->
-<section class="mb-12 px-4 md:px-0">
+<section class="mb-12">
   <!-- Purple box -->
-  <div style="background-color: #D5A9D9" class="rounded-2xl p-8 text-white">
+  <div style="background-color: #D5A9D9" class="rounded-2xl p-5 sm:p-8 text-white">
 
     <!-- Heading -->
     <h2 id="book-heading" class="text-2xl font-semibold text-center mb-2 transition-all duration-300">
@@ -112,7 +117,7 @@
     </p>
 
     <!-- Preview display -->
-    <div id="book-preview" class="hidden flex items-start gap-6 mb-8">
+    <div id="book-preview" class="hidden flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 mb-8 text-center sm:text-left">
   <div class="h-48 w-32 flex-shrink-0 overflow-hidden rounded-2xl shadow-md">
     <img id="book-cover"
          src=""
@@ -126,7 +131,7 @@
 </div>
 
     <!-- Book icons -->
-    <div class="flex flex-wrap justify-center items-center gap-6">
+    <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6">
       <!-- New Book -->
     <div class="w-32 h-48 overflow-hidden rounded-lg shadow-md cursor-pointer" onclick="selectBook(this)"
       data-name="Wherever You Go There You Are"
@@ -283,6 +288,7 @@
     </a>
   </div>
 </div>
+  </div>
 </section>
 
 

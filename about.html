@@ -7,14 +7,18 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <script src="nav.js" defer></script>
 </head>
 
 
 <body class="text-gray-800 font-sans" style="background-color: #D9BEDA;">
   <header style="background-color: #af5ebc" class="text-white shadow sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-xl font-bold">Brown Meditation Community</a>
-      <nav class="space-x-6">
+    <div class="site-header-inner max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-lg sm:text-xl font-bold">Brown Meditation Community</a>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav id="site-nav" class="site-nav space-x-6">
         <a href="about.html" class="text-indigo-200 font-semibold">About</a>
         <a href="calendar.html" class="hover:text-indigo-200">Calendar</a>
         <a href="join.html" class="hover:text-indigo-200">Connect</a>
@@ -26,28 +30,28 @@
   </header>
 
   <!-- About the BMC  -->
-  <main class="max-w-4xl mx-auto px-6 py-16">
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
 
     <section style="background-color: #B57CB6" class="mb-8 p-6 text-center rounded-2xl text-white">
-  <h1 class="text-4xl font-bold text-center mb-1">About the BMC</h1>
+  <h1 class="text-3xl sm:text-4xl font-bold text-center mb-1">About the BMC</h1>
 </section>
 
-<section style="background-color: #B57CB6" class="mb-12 p-6 text-center rounded-2xl text-white">
-  <h2 class="text-2xl font-semibold mb-8">Mission</h2>
-  <div style="background-color: #D5A9D9" class="rounded-2xl p-6 text-center">
+<section style="background-color: #B57CB6" class="mb-12 p-4 sm:p-6 text-center rounded-2xl text-white">
+  <h2 class="text-2xl font-semibold mb-6 sm:mb-8">Mission</h2>
+  <div style="background-color: #D5A9D9" class="rounded-2xl p-4 sm:p-6 text-center">
   <p class="text-white">The Brown Meditation Community (BMC) is a student-run group that fosters well-being and community through different contemplative practices. The BMC is committed to maintaining a maximally inclusive and accessible environment that prioritizes compassion, self-care, and self-inquiry. People of all backgrounds and experience levels are welcome at any event. The BMC is non-denominational and is informed by a multitude of meditative practices from a variety of religious traditions. To credit and respect these traditions, the BMC strives to speak about, rather than for, these traditions. Navigating contemplative practice in the BMC is complex and imperfect; we always welcome dialogue about the intent, methods, and impacts of appropriating meditative practices from their indigenous contexts. The BMC hopes to share meditation and engage in contemplative experience with attention to context as much as content.</p>
   </div>
 </section>
 
 
-  <section class="mb-12 px-4 md:px-0">
+  <section class="mb-12">
   <!-- Outer container with purple background and rounded corners -->
-  <div style="background-color: #B57CB6" class="rounded-2xl p-6 text-white">
+  <div style="background-color: #B57CB6" class="rounded-2xl p-4 sm:p-6 text-white">
     <!-- Section Heading -->
     <h2 class="text-2xl font-semibold text-center mb-8">Core Values</h2>
 
     <!-- Grid of 4 smaller value boxes -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
       <!-- Value 1 -->
       <div style="background-color: #D5A9D9" class="rounded-2xl p-6 text-center">
         <h3 class="text-xl font-semibold mb-2">Service</h3>
@@ -77,9 +81,9 @@
 
 
 <!-- Offerings Section -->
-    <section class="mb-12 px-4 md:px-0">
+    <section class="mb-12">
   <!-- Outer purple box -->
-  <div style="background-color: #B57CB6" class="rounded-2xl p-8 text-white">
+  <div style="background-color: #B57CB6" class="rounded-2xl p-4 sm:p-8 text-white">
     <!-- Section Heading -->
     <h2 class="text-2xl font-semibold text-center mb-8">Offerings</h2>
 
@@ -119,8 +123,8 @@
 </section>
 
 <!-- Facilitators Section -->
-<section class="mb-12 px-4 md:px-0">
-  <div style="background-color: #B57CB6" class="rounded-2xl p-8 text-white">
+<section class="mb-12">
+  <div style="background-color: #B57CB6" class="rounded-2xl p-4 sm:p-8 text-white">
     <h2 class="text-2xl font-semibold text-center mb-8">Facilitator</h2>
 
     <!-- Top Row: 4 cards -->
@@ -206,6 +210,7 @@
   </div>
 </div>
 
+    </div>
 
     <!-- Bottom Row: 3 cards -->
     <div class="flex justify-center flex-wrap gap-6">
@@ -266,7 +271,10 @@
     </div>
   </div>
 </div>
+    </div>
+  </div>
 </section>
+  </main>
 
 
 

@@ -29,15 +29,20 @@
       animation: fadeUp 2.5s ease-out 1.5s forwards;
     }
   </style>
+  <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <script src="nav.js" defer></script>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans m-0 p-0">
 
   <!-- Navigation -->
   <header style="background-color: #af5ebc" class="text-white shadow sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold">Brown Meditation Community</h1>
-      <nav class="space-x-6">
+    <div class="site-header-inner max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-lg sm:text-xl font-bold">Brown Meditation Community</h1>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav id="site-nav" class="site-nav space-x-6">
         <a href="about.html" class="hover:text-indigo-200">About</a>
         <a href="calendar.html" class="hover:text-indigo-200">Calendar</a>
         <a href="join.html" class="hover:text-indigo-200">Connect</a>
