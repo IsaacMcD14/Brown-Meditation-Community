@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Connect - Brown Meditation Community</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <style>
     /* Shared button styling so every button in this view darkens on hover.
@@ -17,14 +18,18 @@
       background-color: #9E7CA0;
     }
   </style>
+  <script src="nav.js" defer></script>
 </head>
 
 <body class="bg-[#f2eaf4] text-gray-800 font-sans" style="background-color: #D9BEDA;">
   <!-- Header -->
   <header style="background-color: #af5ebc" class="text-white shadow sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-xl font-bold">Brown Meditation Community</a>
-      <nav class="space-x-6">
+    <div class="site-header-inner max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-lg sm:text-xl font-bold">Brown Meditation Community</a>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav id="site-nav" class="site-nav space-x-6">
         <a href="about.html" class="hover:text-indigo-200">About</a>
         <a href="calendar.html" class="hover:text-indigo-200">Calendar</a>
         <a href="join.html" class="text-indigo-200 font-semibold">Connect</a>
@@ -36,10 +41,10 @@
   </header>
 
   <!-- Main Content -->
-  <main class="max-w-3xl mx-auto px-4 py-16">
+  <main class="max-w-3xl mx-auto px-4 py-10 sm:py-16">
   <!-- Large header box -->
-  <section style="background-color: #B57CB6" class="mb-12 py-12 text-center rounded-2xl text-white">
-    <h1 class="text-4xl font-bold">Connect With Us</h1>
+  <section style="background-color: #B57CB6" class="mb-8 sm:mb-12 py-10 sm:py-12 px-4 text-center rounded-2xl text-white">
+    <h1 class="text-3xl sm:text-4xl font-bold">Connect With Us</h1>
   </section>
 
   <!-- Smaller option boxes -->
@@ -97,9 +102,23 @@
   <p id="copy-confirmation" class="text-sm mt-2 hidden text-white">Copied!</p>
 </div>
 
+    <!-- Feedback form -->
+<div style="background-color: #D5A9D9" class="rounded-2xl p-6 text-white text-center">
+  <h2 class="text-xl font-semibold mb-4">Share your feedback</h2>
+  <div class="flex justify-center">
+    <a href="https://forms.gle/Fhk5AZDRPeT93s7n9"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="connect-btn inline-block font-semibold px-6 py-3 rounded-lg text-white text-sm">
+      Give feedback
+    </a>
+  </div>
+</div>
+
 
   <!-- Closing note -->
   <p class="mt-8 text-center text-gray-600 italic">Please email us with any questions, we look forward to hearing from you!</p>
+  </div>
 </main>
 
 

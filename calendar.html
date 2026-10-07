@@ -7,12 +7,16 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <script src="nav.js" defer></script>
 </head>
 <body class="b text-gray-800 font-sans" style="background-color: #D9BEDA;">
   <header style="background-color: #af5ebc" class="text-white shadow sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-xl font-bold">Brown Meditation Community</a>
-      <nav class="space-x-6">
+    <div class="site-header-inner max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-lg sm:text-xl font-bold">Brown Meditation Community</a>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav id="site-nav" class="site-nav space-x-6">
         <a href="about.html" class="hover:text-indigo-200">About</a>
         <a href="calendar.html" class="text-indigo-200 font-semibold">Calendar</a>
         <a href="join.html" class="hover:text-indigo-200">Connect</a>
@@ -23,20 +27,42 @@
     </div>
   </header>
 
-  <main class="max-w-4xl mx-auto px-4 py-16 text-center">
+  <main class="max-w-4xl mx-auto px-4 py-10 sm:py-16 text-center">
   
-    <section class="mb-8 px-4 md:px-0">
-      <div class=" p-8 text-white rounded-2xl" style="background-color: #B57CB6">
-    <h1 class="text-4xl text-center font-bold">Calendar</h1>
+    <section class="mb-8">
+      <div class="p-6 sm:p-8 text-white rounded-2xl" style="background-color: #B57CB6">
+    <h1 class="text-3xl sm:text-4xl text-center font-bold">Calendar</h1>
   </div>
 </section>
       
   <section>
     <p class="mb-8">Below is the BMC Google Calendar. You can add events directly to your personal calendar!</p>
-    <div class="w-full h-[800px] flex justify-center">
-      <!-- Replace the src below with your actual Google Calendar embed link -->
-      <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&src=Y19lZGZmZjc2NjFkMjBhNmY0N2UxZGI4ZGVhNDk0Y2RmNjAxMTdkNzRkYmNiZDRkNjA4M2RhM2VhZDRlZmRkMzVhQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23c0ca33" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-      <section>
+    <div class="calendar-frame">
+      <iframe id="bmc-calendar" title="Brown Meditation Community Google Calendar" frameborder="0" scrolling="no"
+        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&src=Y19lZGZmZjc2NjFkMjBhNmY0N2UxZGI4ZGVhNDk0Y2RmNjAxMTdkNzRkYmNiZDRkNjA4M2RhM2VhZDRlZmRkMzVhQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23c0ca33"></iframe>
+      <!-- Points at the "Add to Google Calendar" link: from the left on wide screens, from below otherwise -->
+      <p class="calendar-hint">
+        <svg class="hint-arrow-side" width="44" height="20" viewBox="0 0 44 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M2 14 C 14 4, 26 4, 40 10"/>
+          <path d="M33 4 L41 10 L33 15"/>
+        </svg>
+        <svg class="hint-arrow-up" width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <g>
+            <path d="M30 30 C 16 30, 8 22, 8 6"/>
+            <path d="M2 12 L8 5 L14 12"/>
+          </g>
+        </svg>
+        <span>add this to your Google Calendar</span>
+      </p>
+    </div>
+  </section>
+  <script>
+    // The month grid is too cramped on narrow screens, so show Google's list view instead.
+    var cal = document.getElementById("bmc-calendar");
+    if (cal.getBoundingClientRect().width < 640) {
+      cal.src = cal.src + "&mode=AGENDA";
+    }
+  </script>
 
   </main>
 

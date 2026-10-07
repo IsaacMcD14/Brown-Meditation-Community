@@ -87,3 +87,162 @@
 }
 
 
+
+/* ---------- Mobile navigation ---------- */
+/* The menu button only shows on small screens; on desktop the links sit inline as before. */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  color: inherit;
+  padding: 0.25rem;
+  cursor: pointer;
+  line-height: 0;
+}
+
+@media (max-width: 767px) {
+  .site-header-inner {
+    position: relative;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #af5ebc;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+    padding: 0.25rem 0 0.75rem;
+  }
+
+  .site-nav.open {
+    display: flex;
+  }
+
+  /* Tailwind's space-x-6 adds a left margin to each link; reset it for the stacked menu. */
+  .site-nav > a {
+    margin-left: 0 !important;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* ---------- Calendar "add to your calendar" hint ---------- */
+.calendar-frame {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  /* Lets the hint react to the calendar's own width, which is what Google's embed responds to. */
+  container-type: inline-size;
+}
+
+.calendar-frame iframe {
+  display: block;
+  width: 100%;
+  height: 600px;
+  border: 1px solid #777;
+}
+
+/* Google puts its "Add to Google Calendar" link in the embed's bottom-left corner,
+   so the hint sits right under that corner. */
+.calendar-hint {
+  --nudge-x: -2px;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+  padding: 0 0.5rem;
+  color: #6b2d78;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.calendar-hint svg {
+  flex-shrink: 0;
+  animation: hintNudge 1.6s ease-in-out infinite;
+}
+
+.calendar-hint svg g {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.calendar-hint span {
+  padding-top: 1.1rem;
+}
+
+/* When the embed is narrower than 640px, Google swaps that link for a "+" button in the
+   bottom-right corner, so the hint moves to the right and the arrow flips to point at it. */
+@container (max-width: 639px) {
+  .calendar-hint {
+    --nudge-x: 2px;
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+
+  .calendar-hint svg g {
+    transform: scaleX(-1);
+  }
+}
+
+/* On wide screens there's room beside the calendar, so the hint sits to the left of the
+   embed, level with the "Add to Google Calendar" link, and points right at it. */
+.hint-arrow-side {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .calendar-frame {
+    position: relative;
+  }
+
+  .calendar-hint {
+    --nudge-x: 3px;
+    position: absolute;
+    right: 100%;
+    bottom: 4px;
+    width: 9.5rem;
+    margin: 0 0.5rem 0 0;
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    line-height: 1.25;
+  }
+
+  .calendar-hint span {
+    order: -1;
+    padding-top: 0;
+  }
+
+  .hint-arrow-up {
+    display: none;
+  }
+
+  .hint-arrow-side {
+    display: block;
+  }
+}
+
+@keyframes hintNudge {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(var(--nudge-x), -3px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .calendar-hint svg {
+    animation: none;
+  }
+}
+
+@media (max-width: 639px) {
+  .calendar-frame iframe {
+    height: 520px;
+  }
+}
